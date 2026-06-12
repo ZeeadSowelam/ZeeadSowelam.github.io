@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" width="780" height="580" font-family="'Segoe Print','Bradley Hand','Comic Sans MS',cursive">
+  <defs>
+    <!-- subtle wobble so straight strokes read as hand-drawn, not stock-graphic -->
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#222" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="580" fill="#fdfaf3"/>
+
+  <!-- boxes + connectors get the wobble filter; text stays crisp -->
+  <g filter="url(#rough)" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="150" y="18"  width="380" height="46" rx="6"/>
+    <rect x="150" y="98"  width="380" height="46" rx="6"/>
+    <rect x="150" y="178" width="380" height="46" rx="6"/>
+    <rect x="150" y="258" width="380" height="46" rx="6"/>
+    <rect x="150" y="338" width="380" height="46" rx="6"/>
+    <rect x="150" y="418" width="380" height="46" rx="6"/>
+    <rect x="150" y="498" width="380" height="46" fill="#f0ece1" rx="6"/>
+
+    <line x1="340" y1="64"  x2="340" y2="96"  marker-end="url(#ah)"/>
+    <line x1="340" y1="144" x2="340" y2="176" marker-end="url(#ah)"/>
+    <line x1="340" y1="224" x2="340" y2="256" marker-end="url(#ah)"/>
+    <line x1="340" y1="304" x2="340" y2="336" marker-end="url(#ah)"/>
+    <line x1="340" y1="384" x2="340" y2="416" marker-end="url(#ah)"/>
+    <line x1="340" y1="464" x2="340" y2="496" marker-end="url(#ah)"/>
+
+    <!-- return path: bytes back up the same stack -->
+    <path d="M530,521 C640,521 660,521 660,460 L660,80 C660,41 600,41 532,41" marker-end="url(#ah)"/>
+
+    <!-- bracket: everything between the trap and the driver is my code -->
+    <path d="M128,98 L120,98 L120,464 L128,464"/>
+    <line x1="120" y1="281" x2="112" y2="281"/>
+  </g>
+
+  <g fill="#222" font-size="17" text-anchor="middle">
+    <text x="340" y="47">user program:  read(fd, buf, n)</text>
+    <text x="340" y="127">syscall trap (ecall) into sysread</text>
+    <text x="340" y="207">I/O layer: open / read / write / seek / ioctl</text>
+    <text x="340" y="287">NGFS filesystem</text>
+    <text x="340" y="367">block cache</text>
+    <text x="340" y="447">VirtIO block driver (virtqueue)</text>
+    <text x="340" y="527">emulated disk (QEMU virtio-blk)</text>
+  </g>
+
+  <g fill="#555" font-size="14">
+    <text x="108" y="286" text-anchor="end" transform="rotate(-90 108 286)">every layer here is my code</text>
+    <text x="676" y="300" transform="rotate(90 676 300)">one read() returns back up the stack</text>
+    <text x="538" y="565" font-size="13">hardware / emulator boundary</text>
+  </g>
+</svg>

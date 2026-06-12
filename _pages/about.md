@@ -2,33 +2,32 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Electrical Engineering @ UIUC. Embedded systems, FPGAs, GPU computing, and quantitative trading.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info:
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm an electrical engineering student at the University of Illinois Urbana-Champaign, finishing my B.S. in December 2026. Most of my work sits on the line between hardware and software: bringing up an OS kernel on bare-metal RISC-V, building an FPGA audio system in SystemVerilog, profiling CUDA kernels on a GPU, and designing a multi-rail, high-voltage PCB. Alongside that, I co-founded a quantitative trading project where we built and live-deployed a statistical-arbitrage framework with real money behind it.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+The common thread is that I like understanding a system all the way down (from the registers and power rails up through the drivers, the timing, and the math) and being honest about where it works and where it doesn't. I care more about getting the details right and explaining them clearly than about making things sound impressive.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I previously interned at Linda Industries in Cairo, where I built a SCADA-based real-time monitoring system for a steel pipe assembly line and cut average downtime by about 20%. I work in Python, C/C++, embedded C, SystemVerilog, RISC-V assembly, and CUDA, with FPGA tooling (Vivado/Vitis), PCB design, and the usual embedded interfaces (SPI, I2C, UART, USB HID).
+
+The projects below go into the technical detail. If you'd like to talk, email is the best way to reach me.
