@@ -4,7 +4,7 @@ title: GPU-Accelerated CNN Convolution
 description: Profiling-driven CUDA optimization of the convolution layers in a small CNN (ECE 408), built around a tensor-core roofline prediction made before the kernel was written and then checked against nsys and Nsight Compute.
 img: assets/img/cuda_tensorcore_optime_table.jpeg
 importance: 3
-category: systems
+category: work
 related_publications: false
 ---
 

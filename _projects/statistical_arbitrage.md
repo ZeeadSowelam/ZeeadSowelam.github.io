@@ -4,7 +4,7 @@ title: Statistical Arbitrage in a Niche Market
 description: A survival-analysis approach to arbitrage in a slow, data-starved, decentralized market, co-founded, modeled, and deployed with real money.
 img: assets/img/arbitrage_sde_forecast.jpeg
 importance: 1
-category: quant
+category: work
 related_publications: false
 ---
 

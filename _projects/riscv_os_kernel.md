@@ -4,7 +4,7 @@ title: RISC-V Operating System Kernel
 description: A preemptive multitasking kernel for 64-bit RISC-V, built from bare metal in C and assembly. Interrupt controllers and device drivers up through virtual memory, a block cache, a filesystem, and a user-space shell.
 img: assets/img/oskernel_read_path.svg
 importance: 2
-category: systems
+category: work
 related_publications: false
 ---
 

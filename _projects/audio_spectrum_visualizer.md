@@ -4,7 +4,7 @@ title: Audio Spectrum Visualizer
 description: An FPGA system that streams audio off an SD card and draws it on an HDMI display in real time (ECE 385). The real work was getting audio playback, SD streaming, video, and USB input to share one processor without the sound falling apart.
 img: assets/img/audio_hdmi_output.png
 importance: 4
-category: systems
+category: work
 related_publications: false
 ---
 

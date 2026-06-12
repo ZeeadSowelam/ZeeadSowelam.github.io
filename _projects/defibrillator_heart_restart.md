@@ -4,7 +4,7 @@ title: "Heart Restart: a dual-shock defibrillator"
 description: A microcontroller-controlled AED (ECE 395) that measures thoracic bio-impedance before discharge and is built for two sequential biphasic shocks, with strict galvanic isolation between the high-voltage side and the STM32. I designed the five-rail power subsystem, the 4-layer mixed-signal PCB, and the isolation.
 img: assets/img/defib_pcb_render.png
 importance: 5
-category: systems
+category: work
 related_publications: false
 ---
 
