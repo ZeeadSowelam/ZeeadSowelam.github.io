@@ -1,0 +1,229 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Statistical Arbitrage in a Niche Market | Zeead Sowelam </title> <meta name="author" content="Zeead S. Sowelam"> <meta name="description" content="A survival-analysis approach to arbitrage in a slow, data-starved, decentralized market, co-founded, modeled, and deployed with real money."> <meta name="keywords" content="Zeead Sowelam, electrical engineering, embedded systems, FPGA, CUDA, quantitative trading, UIUC"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://zeeadsowelam.github.io/projects/statistical_arbitrage/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Zeead Sowelam </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Statistical Arbitrage in a Niche Market</h1> <p class="post-description">A survival-analysis approach to arbitrage in a slow, data-starved, decentralized market, co-founded, modeled, and deployed with real money.</p> </header> <article> <p>Classical statistical arbitrage assumes two things this market does not have: speed and clean data. The textbook version runs at high frequency over deep, well-behaved order books. We wanted to know whether the same ideas survive once you take both of those away, so we built a framework for a niche, decentralized in-game-item market with slow, <em>enforced</em> settlement times, sparse history, and a free data API that was actively being deprecated underneath us.</p> <p>This was a real project with real money in it, co-founded with Lucas Logue and run from March 2025 onward. We deployed $13,500 of our own capital and traded it live for about 5.7 months. The honest version of what happened (including the part where the market changed the rules overnight and the model fell over) is below. The full paper goes much deeper.</p> <p><em>Co-founded with Lucas Logue · March 2025 – present · Python (hierarchical Bayesian modeling), survival analysis, stochastic differential equations, custom data pipeline.</em></p> <h2 id="why-survival-analysis">Why survival analysis</h2> <p>The non-obvious choice here is the modeling frame. When you buy an item in this market, you are forced to hold it for seven days before you can trade it again. That hold is the whole problem. The risk isn’t really price. It’s <em>time</em>: after seven days the item may have lost value, the arbitrage window you bought into may have closed, and you’re left holding something worth less than you paid.</p> <p>That is a survival problem. Instead of asking “what will the price be,” we ask “how long does an arbitrage opportunity stay open, and what’s the probability it’s still open by the time my hold expires.” The model picks the items most likely to survive the wait. Framing it as duration rather than price is what made the rest of the math tractable.</p> <p>We built this as a <strong>hierarchical Bayesian Weibull Accelerated Failure Time (AFT)</strong> model. The Weibull AFT’s additive log-duration structure held up well under sparse, messy data, which mattered more than usual here. Two custom features we engineered for this market, a congestion metric and a benchmark-ratio deviation, came out statistically significant (94% HDI excluding zero), which was a relief, because we made them up.</p> <div class="row justify-content-sm-center"> <div class="col-sm-7 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/arbitrage_survival_curves-480.webp 480w,/assets/img/arbitrage_survival_curves-800.webp 800w,/assets/img/arbitrage_survival_curves-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/arbitrage_survival_curves.jpeg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Posterior survival curves: the modeled probability that an arbitrage opportunity is still open over time, with credible bands. Each panel is a different asset category. The model's job is to pick items whose curve stays high through the seven-day hold. </div> <p>To make sure we weren’t just believing our own model, I built a separate <strong>Bayesian hierarchical piecewise-exponential Cox proportional-hazards model</strong> to benchmark the Weibull AFT retrospectively. The idea was to attack our own work from a different structural assumption and see whether the conclusions held. They mostly did, but the Cox model also showed its limits: an optimally-parameterized Cox PH got corrupted by the market’s data sparsity in a way the AFT didn’t, and the AFT came out about 20% more accurate. The lesson was the useful kind: the “better” model on paper was the worse model for <em>this</em> data.</p> <h2 id="forecasting-price-with-a-jump-diffusion-sde">Forecasting price with a jump-diffusion SDE</h2> <p>Survival picks <em>what</em> to buy; we still needed a view on <em>price</em> to size and time trades. Standard Geometric Brownian Motion is a bad fit for this market. It assumes a kind of smooth, continuous drift that simply isn’t how these items move. We used a <strong>jump-diffusion stochastic differential equation</strong> with a Bayesian-learned, structurally-specified drift term to forecast commodity prices, so the model could express both the slow grind and the sudden jumps.</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/arbitrage_sde_forecast-480.webp 480w,/assets/img/arbitrage_sde_forecast-800.webp 800w,/assets/img/arbitrage_sde_forecast-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/arbitrage_sde_forecast.jpeg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption"> Custom SDE price forecast for one commodity: historical price (black), median forecast (dashed), and the probabilistic fan of simulated diffusion paths. The widening cone is the model being honest about how little it knows past a certain horizon. </div> <h2 id="the-data-pipeline">The data pipeline</h2> <p>This was my main piece of the early work. The market’s data lived behind a free, soon-to-be-deprecated API with tight rate limits, so naive fetching was a non-starter. I built a batch-fetching pipeline that pulled the daily dataset we needed in roughly 150 calls at an 8:1 compression ratio, enough headroom to keep the models fed without tripping the limits or depending on an API that might vanish. Sparse markets punish you twice: once for having little data, and again for making it expensive to get. The pipeline was the difference between a model we could actually run daily and a nice idea.</p> <h2 id="the-part-where-it-broke">The part where it broke</h2> <p>Phase 3, somewhere in the September–November 2025 window, was a genuine market crash, and it’s the part I’d rather not skip. The platform operator changed a core game mechanic in a way that was about to flood the supply of an entire category of high-value items. Almost everything moved at once: every open arbitrage window closed simultaneously, and that whole category instantly lost 30%+ of its value on the anticipated future supply.</p> <p>The model did not hold. It was never built for a structural regime shift of that size. It had been quietly assuming the rules of the world were fixed, which is exactly the assumption that just broke. The fix wasn’t a parameter tweak; we went back and modified the model to explicitly account for major market shifts, so that pre-shift data couldn’t corrupt the current estimates. A model that has never seen a regime change will trust the old world right up until it loses you money. Now it doesn’t.</p> <h2 id="did-it-work">Did it work</h2> <p>Over the live run, by our most conservative bookkeeping (the gains we’re willing to attribute specifically to the models, after platform fees), $13,500 became about $19,100, a return of roughly 40% in 5.7 months. For reference, the S&amp;P 500 returned about 8% over the same window. Max drawdown was around 38%, mostly courtesy of Phase 3. We succeeded on more than 70% of arbitrage trades, and the portfolio beat the broad niche-market index it was trading inside by a wide margin.</p> <p>The number I actually care about is calibration. When the model said a bracket of trades had a 40–50% chance of working, the realized rate came in around 54%, i.e. it was conservative, under-promising and over-delivering, which is the failure mode you want if you have to pick one. A trading model that’s wrong in the optimistic direction loses real money; ours leaned the other way.</p> <h2 id="who-did-what">Who did what</h2> <p>Lucas did most of the original modeling. My share was the data pipeline and a good chunk of the live trading, and I later built the Cox proportional-hazards benchmark to stress-test the original models and the post-crash Phase 4 model, to find the weaknesses if there were any, and confirm the strengths if there weren’t.</p> <p>On the real-money part: it meant we couldn’t afford to be sloppy with the model, because a real mistake meant real losses. We put our own savings behind it because we believed the idea was right and wanted to prove it with skin in the game rather than a backtest. The paper’s acknowledgments thank one author for “entrusting the other with his savings,” which is funnier in hindsight than it was at the time.</p> <hr> <p><a href="/assets/pdf/statistical_arbitrage_paper.pdf"><strong>View the full writeup (PDF)</strong></a>, the complete ~50-page paper, co-authored with Lucas Logue, with full model specifications, priors, posterior tables, and SDE derivations.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Zeead S. Sowelam. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Course materials, schedules, and resources for classes taught.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-people",
+          title: "people",
+          description: "members of the lab or group",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/people/";
+          },
+        },{id: "dropdown-bookshelf",
+              title: "bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
+            },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{id: "projects-audio-spectrum-visualizer",
+          title: 'Audio Spectrum Visualizer',
+          description: "An FPGA system that streams audio off an SD card and draws it on an HDMI display in real time (ECE 385). The real work was getting audio playback, SD streaming, video, and USB input to share one processor without the sound falling apart.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/audio_spectrum_visualizer/";
+            },},{id: "projects-gpu-accelerated-cnn-convolution",
+          title: 'GPU-Accelerated CNN Convolution',
+          description: "Profiling-driven CUDA optimization of the convolution layers in a small CNN (ECE 408), built around a tensor-core roofline prediction made before the kernel was written and then checked against nsys and Nsight Compute.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cuda_convolution/";
+            },},{id: "projects-heart-restart-a-dual-shock-defibrillator",
+          title: 'Heart Restart: a dual-shock defibrillator',
+          description: "A microcontroller-controlled AED (ECE 395) that measures thoracic bio-impedance before discharge and is built for two sequential biphasic shocks, with strict galvanic isolation between the high-voltage side and the STM32. I designed the five-rail power subsystem, the 4-layer mixed-signal PCB, and the isolation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/defibrillator_heart_restart/";
+            },},{id: "projects-risc-v-operating-system-kernel",
+          title: 'RISC-V Operating System Kernel',
+          description: "A preemptive multitasking kernel for 64-bit RISC-V, built from bare metal in C and assembly. Interrupt controllers and device drivers up through virtual memory, a block cache, a filesystem, and a user-space shell.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/riscv_os_kernel/";
+            },},{id: "projects-statistical-arbitrage-in-a-niche-market",
+          title: 'Statistical Arbitrage in a Niche Market',
+          description: "A survival-analysis approach to arbitrage in a slow, data-starved, decentralized market, co-founded, modeled, and deployed with real money.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/statistical_arbitrage/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%73%6F%77%65%6C%61%6D%7A%65%65%61%64@%67%6D%61%69%6C.%63%6F%6D %6F%72 %73%6F%77%65%6C%61%6D%32@%69%6C%6C%69%6E%6F%69%73.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/ZeeadSowelam", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/zeeadsowelam", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
