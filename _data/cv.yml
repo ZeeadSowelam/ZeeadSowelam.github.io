@@ -1,189 +1,102 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Zeead Sowelam
+  label: Electrical Engineering @ UIUC
+  email: sowelamzeead@gmail.com
+  location: Urbana, IL
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    Electrical engineering student at the University of Illinois Urbana-Champaign, finishing a B.S. in December 2026.
+    Most of my work sits on the line between hardware and software: bringing up an OS kernel on bare-metal RISC-V,
+    building FPGA systems in SystemVerilog, profiling CUDA kernels, and designing high-voltage PCBs. Alongside that
+    I co-founded a quantitative trading project and live-deployed a statistical-arbitrage framework with real money
+    behind it. I like understanding a system all the way down and being honest about where it works and where it does
+    not. U.S. citizen, eligible for clearance.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: ZeeadSowelam
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: zeeadsowelam
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: University of Illinois Urbana-Champaign
+        location: Urbana, IL
+        url: https://grainger.illinois.edu/
+        area: Electrical Engineering
+        studyType: Bachelor of Science (B.S.)
+        start_date: 2023-08
+        end_date: 2026-12
+        score: "GPA: 3.62"
+        courses: "Digital Signal Processing, Applied Parallel Programming, Computer Systems Engineering, Digital Systems Laboratory, Advanced Digital Projects Laboratory, Analog Signal Processing, Electronic Circuits, Operating Systems, Systems Programming"
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Linda Industries
+        position: Engineering Intern
+        location: Cairo, Egypt
+        start_date: 2023-06
+        end_date: 2023-08
+        summary: ""
         highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+          - Built a control mechanism to cut downtime on a steel pipe assembly line, installing sensors and analyzing the data to manage high-temperature fluctuations and find optimal timing in the soldering line.
+          - Built a real-time monitoring system in SCADA software tracking temperature, vibration, and displacement, with instant alerts for overheating or misalignment, which reduced average downtime by about 20 percent.
+          - Researched preventative-maintenance strategies and installed temperature, displacement, vibration, and tank-level sensors across several processing lines, wired through RTUs and PLCs to a central PC dashboard.
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: Statistical Arbitrage in a Niche Market
+        summary: "Survival-analysis approach to arbitrage in a slow, data-starved, decentralized market. Co-founded, modeled, and deployed with real money."
+        start_date: 2025-03
+        end_date: present
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Co-founded with Lucas Logue. Deployed $13,500 of our own capital and traded it live for about 5.7 months, returning roughly 40 percent.
+          - Built a hierarchical Bayesian Weibull Accelerated Failure Time model to pick arbitrage opportunities likely to survive an enforced seven-day hold, and a jump-diffusion SDE to forecast prices.
+          - Built the batch-fetching data pipeline (about 150 calls at an 8:1 compression ratio against a rate-limited, soon-to-be-deprecated API) and a Cox proportional-hazards benchmark, where the Weibull AFT came out about 20 percent more accurate under the market's data sparsity.
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: RISC-V Operating System Kernel
+        summary: "Preemptive multitasking Unix-like kernel for 64-bit RISC-V, built from bare metal in C and assembly, booting under QEMU (ECE 391)."
+        highlights:
+          - Implemented the PLIC interrupt controller, an interrupt-driven NS16550 UART, a Goldfish RTC, and VirtIO block and entropy drivers at the virtqueue level, plus a cooperative threading system with assembly context switching that I later extended into preemption.
+          - Owned Sv39 virtual memory, the block cache over VirtIO and in-memory devices, the syscall interface, and the NGFS file operations behind a unified I/O layer.
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: GPU-Accelerated CNN Convolution
+        summary: "Profiling-driven CUDA optimization of the convolution layers of a small CNN, im2col plus matrix multiply on an NVIDIA A40 (ECE 408)."
+        highlights:
+          - Used a roofline argument to predict, before writing the kernel, that tensor cores would lose on this memory-bound workload, then confirmed it with nsys and Nsight Compute and traced the bottleneck to address arithmetic rather than matmul throughput.
+          - Worked through which textbook optimizations (constant memory, FP16, CUDA streams) helped or hurt on this workload and why, learning to read occupancy, memory throughput, and stall reasons as one workflow.
+
+      - name: Audio Spectrum Visualizer
+        summary: "FPGA system that streams audio off an SD card and draws it on an HDMI display in real time (ECE 385)."
+        start_date: 2025-11
+        end_date: 2025-12
+        highlights:
+          - Built a continuous SD-to-BRAM streaming engine in SystemVerilog through an 8KB circular buffer with rate-matched throttling, and interrupt-driven 44.1 kHz playback via an AXI timer ISR for distortion-free output.
+          - Built five real-time visualization modes on a 60 FPS HDMI text display, integrating a MicroBlaze processor, SPI SD interface, PWM audio output, and USB HID input.
+
+      - name: "Heart Restart: Dual-Shock Defibrillator"
+        summary: "Microcontroller-controlled AED built for two sequential biphasic shocks, with strict galvanic isolation between the high-voltage side and the STM32 (ECE 395)."
+        start_date: 2026-01
+        end_date: 2026-05
+        highlights:
+          - Designed the five-rail power subsystem, converting an 18V battery input to five regulated rails using TPS5420 buck converters and LT1054 charge-pump inverters, validated in LTspice.
+          - Designed a 4-layer mixed-signal PCB in KiCad with 200V-plus creepage and clearance, and integrated AMC1200 isolation amplifiers and isolated DC-DC converters to keep the high-voltage pads separated from the STM32 control logic.
+
+    Skills:
+      - name: Languages
+        icon: fa-solid fa-code
+        keywords: "Python, C/C++, Embedded C, SystemVerilog, RISC-V Assembly, CUDA, LC3"
+
+      - name: Hardware Description & Design
+        icon: fa-solid fa-microchip
+        keywords: "SystemVerilog, FPGA development (AMD Vivado, Xilinx Vitis), AXI4-Lite, PCB design (KiCad)"
+
+      - name: Embedded Systems
+        icon: fa-solid fa-memory
+        keywords: "Embedded C, SPI, I2C, UART, USB HID, Linux, RTOS concepts"
+
+      - name: Quantitative & Modeling
+        icon: fa-solid fa-chart-line
+        keywords: "Bayesian inference, survival analysis, hierarchical modeling, stochastic differential equations, data pipelines"
+
+      - name: Developer Tools
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: "Git, GCC, GDB, VS Code, PyCharm, Jupyter, AMD Vivado, Xilinx Vitis"
