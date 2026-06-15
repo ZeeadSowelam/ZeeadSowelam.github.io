@@ -2,7 +2,7 @@
 layout: page
 title: Statistical Arbitrage in a Niche Market
 description: A survival-analysis approach to arbitrage in a slow, data-starved, decentralized market, co-founded, modeled, and deployed with real money.
-img: assets/img/arbitrage_sde_forecast.jpeg
+img: assets/img/arbitrage_sde_forecast.png
 importance: 1
 category: work
 related_publications: false
@@ -24,7 +24,7 @@ We built this as a **hierarchical Bayesian Weibull Accelerated Failure Time (AFT
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-7 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/arbitrage_survival_curves.jpeg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/arbitrage_survival_curves.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -39,7 +39,7 @@ Survival picks *what* to buy; we still needed a view on *price* to size and time
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/arbitrage_sde_forecast.jpeg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/arbitrage_sde_forecast.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
