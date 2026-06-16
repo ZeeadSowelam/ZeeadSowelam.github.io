@@ -30,4 +30,4 @@ The common thread is that I like understanding a system all the way down (from t
 
 I previously interned at Linda Industries in Cairo, where I built a SCADA-based real-time monitoring system for a steel pipe assembly line and cut average downtime by about 20%. I work in Python, C/C++, embedded C, SystemVerilog, RISC-V assembly, and CUDA, with FPGA tooling (Vivado/Vitis), PCB design, and the usual embedded interfaces (SPI, I2C, UART, USB HID).
 
-The projects below go into the technical detail. If you'd like to talk, email is the best way to reach me.
+The projects below go into the technical detail. If you'd like to talk, email is the best way to reach me at [sowelamzeead@gmail.com](mailto:sowelamzeead@gmail.com).
